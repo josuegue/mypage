@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-y: scroll;
+    /* Permitir scroll vertical en la página completa */
+    margin: auto;
+    padding: auto;
+}
+
+/* Estilos para la barra de navegación */
+header {
+    background-color: #008080;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    /* Asegura que la barra de navegación esté por encima del resto del contenido */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.menu li {
+    /* Estilos para el efecto de transición al seleccionar */
+    transition: background-color 0.3s ease-in;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+
+.menu a:hover {
+    background-color: #B0E0E6;
+    color: #191c32;
+}
+
+.menu .active {
+    background-color: #B0E0E6;
+    color: #191c32;
+}
+
+
+/* Media query para hacer la barra de navegación responsive */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu li {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Parte del main */
+/* Estilos para el contenido dentro del main */
+.main {
+    padding-top: 100px;
+    /* Agregamos padding para dejar espacio entre el main y la barra de navegación */
+    margin-bottom: 40px;
+    margin: 0 auto;
+    /* Centrar horizontalmente el main */
+    width: 80%;
+    /* Ajustar el ancho del main según tus preferencias */
+    max-width: 800px;
+    /* Establecer un ancho máximo para que no se haga demasiado grande */
+    padding: 20px;
+    text-align: center;
+    /* Centrar el texto dentro del main */
+}
+
+.main-project {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 80px; /* Agregamos un espacio igual a la altura de la barra de navegación */
+  }
+
+.main .welcome h1 {
+    padding-top: 200px;
+}
+
+/* Estilos para el enlace */
+.main a {
+    display: inline-block;
+    /* Convertir el enlace en un bloque para poder ajustar el ancho */
+    padding: 10px 20px;
+    background-color: #0003ae;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Efecto de transición para el enlace */
+}
+
+.main a:hover {
+    background-color: #030ff8;
+    /* Cambio de color al pasar el mouse */
+    color: white;
+    /* Cambio de color del texto al pasar el mouse */
+}
+
+.main a:active {
+    background-color: blue;
+    /* Cambio de color al seleccionar (clic en el enlace) */
+    color: white;
+    /* Cambio de color del texto al seleccionar (clic en el enlace) */
+}
+
+/* Media query para hacer el enlace responsive */
+@media screen and (max-width: 768px) {
+    .main {
+        width: 90%;
+        /* Ajustar el ancho del main en pantallas más pequeñas */
+    }
+}
+
+/*-------------------------------- Aboutme */
+/* Estilos para el contenido dentro del main */
+.content {
+    display: flex;
+    justify-content: center;
+    /* Centrar el contenido horizontalmente */
+    align-items: center;
+    /* Centrar el contenido verticalmente */
+    flex-wrap: wrap;
+    /* Permitir que los elementos se envuelvan a una nueva línea si el espacio es insuficiente */
+    padding: 10px;
+    text-align: center;
+    /* Centrar el texto dentro del main */
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about img {
+    width: 300px;
+    /* Tamaño de la imagen (ajustar según tus necesidades) */
+    border-radius: 50%;
+    /* Asegurarse de que la imagen sea redonda */
+}
+
+.about-info {
+    margin-left: 30px;
+    /* Espacio entre la imagen y el texto (ajustar según tus necesidades) */
+}
+
+.about-info h1 {
+    font-size: 24px;
+    /* Tamaño del título (ajustar según tus necesidades) */
+}
+
+.about-info p {
+    font-size: 16px;
+    /* Tamaño del texto (ajustar según tus necesidades) */
+    line-height: 1.6;
+    /* Espaciado entre líneas */
+}
+
+/* Estilos para el botón del CV */
+.download-cv {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #008080;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    /* Tamaño del texto del botón (ajustar según tus necesidades) */
+    margin-top: 20px;
+    /* Espacio entre el texto y el botón */
+}
+
+.download-cv:hover {
+    background-color: #00CED1;
+}
+
+/* --------------------------------Projects */
+/* Estilos para el contenedor de los proyectos */
+.info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: justify;
+    padding-top: 100px; /* Agregamos padding para dejar espacio entre el contenido y la barra de navegación */
+    margin-bottom: 100px; /* Agregamos margen inferior para evitar que se solape con el footer */
+}
+
+.main-project h2{
+    text-align: left;
+    margin-left: 20px;
+    font-size: 36px;
+}
+
+/* Estilos para cada artículo */
+.info-content article {
+    display: flex;
+    flex-direction: row-reverse;
+    /* Invertir el orden de los elementos */
+    align-items: center;
+    margin: 20px;
+}
+
+/* Estilos para la descripción de cada proyecto */
+.info-content article p {
+    flex: 1;
+    /* Ocupar el espacio disponible restante */
+    font-size: 18px;
+    /* Tamaño del texto (ajustar según tus necesidades) */
+}
+
+/* Estilos para el enlace "Ir al proyecto" */
+.info-content article a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #008080;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+    /* Tamaño del texto del enlace (ajustar según tus necesidades) */
+    margin: 10px;
+}
+
+.info-content article a:hover {
+    background-color: #00CED1;
+}
+
+/* Estilos para la imagen de cada proyecto */
+.info-content article img {
+    width: 200px;
+    /* Tamaño de la imagen (ajustar según tus necesidades) */
+    border-radius: 5px;
+}
+
+
+/* Media query para hacer el contenido responsive */
+@media screen and (max-width: 768px) {
+    .info-content article {
+        flex-direction: column;
+        /* Volver a la dirección de columna en pantallas pequeñas */
+    }
+
+    .info-content article p,
+    .info-content article a,
+    .info-content article img {
+        margin: 10px 0;
+        /* Ajustar el espaciado entre elementos en pantallas pequeñas */
+    }
+}
+
+/* --------------------------------Contact */
+/* Estilos para el formulario */
+.send-form {
+    padding-top: 100px;
+    /* Agregamos padding para dejar espacio entre el formulario y la barra de navegación */
+    width: 100%;
+    /* Ajustar el ancho completo */
+    max-width: 600px;
+    /* Establecer un ancho máximo */
+}
+
+.send-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.send-form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    /* Ajustar el espaciado entre elementos */
+}
+
+.send-form label {
+    font-weight: bold;
+}
+
+.send-form input,
+.send-form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    /* Ajustar el espaciado entre campos */
+}
+
+/* Estilos para los enlaces */
+.link-page {
+    width: 100%;
+    /* Ajustar el ancho completo */
+    max-width: 600px;
+    /* Establecer un ancho máximo */
+    text-align: center;
+    /* Centrar el contenido */
+    margin-top: 20px;
+    /* Ajustar el espaciado desde el formulario */
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    /* Centrar horizontalmente los enlaces */
+    gap: 10px;
+    /* Ajustar el espaciado entre enlaces */
+}
+
+.contact a img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Media query para hacer el contenido responsive */
+@media screen and (max-width: 768px) {
+
+    .send-form,
+    .link-page {
+        width: 90%;
+        /* Ajustar el ancho del formulario y enlaces en pantallas más pequeñas */
+    }
+}
+
+/* --------------------------------Footer */
+
+/*-----------------------------------*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo del footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilo de enlaces en el footer (opcional) */
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
