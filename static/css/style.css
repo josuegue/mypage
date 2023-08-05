@@ -12,30 +12,42 @@ body {
     /* Permitir scroll vertical en la página completa */
     margin: auto;
     padding: auto;
+    background-image: url("../img/images.jpeg");
+    background-size: cover; /* Ajustar la imagen al tamaño del fondo */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita en el fondo */
+    background-position: center center; /* Centrar la imagen horizontalmente y verticalmente */
+    /* Opcionalmente puedes agregar más estilos para el body, como color de fuente, tamaño, etc. */
+    color: #fff; /* Ejemplo: color de fuente blanco */
+    font-size: 16px; /* Ejemplo: tamaño de fuente 16px */
 }
 
 /* Estilos para la barra de navegación */
 header {
-    background-color: #008080;
+    background-color: #040537;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 999;
+    display: flex;
     /* Asegura que la barra de navegación esté por encima del resto del contenido */
 }
 
+/* Estilos generales para la barra de navegación */
 .navbar {
+    background-color: #040537;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+    justify-content: flex-end; /* Alinear los elementos al final (derecha) */
+    align-items: center; /* Centrar verticalmente los elementos */
+    padding: 1rem;
 }
 
 .menu {
     list-style: none;
     display: flex;
     gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 .menu li {
@@ -60,24 +72,39 @@ header {
     color: #191c32;
 }
 
+/* Estilos para el botón de navegación en pantallas pequeñas */
+.navbar-button {
+    display: none;
+    /* Ocultar el botón en pantallas grandes */
+    background-color: #040537;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
-/* Media query para hacer la barra de navegación responsive */
+/* Media query para mostrar el botón y ocultar el menú en pantallas pequeñas */
 @media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-        padding: 1rem;
-    }
-
     .menu {
+        display: none; /* Ocultar el menú en pantallas pequeñas */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #040537;
+        padding: 1rem;
         flex-direction: column;
     }
 
-    .menu li {
-        margin-bottom: 1rem;
+    .navbar-button {
+        display: block; /* Mostrar el botón en pantallas pequeñas */
+    }
+
+    .navbar {
+        justify-content: space-between;
+        /* Alinear el botón a la izquierda en pantallas pequeñas */
     }
 }
+
 
 /* Parte del main */
 /* Estilos para el contenido dentro del main */
@@ -93,7 +120,6 @@ header {
     /* Establecer un ancho máximo para que no se haga demasiado grande */
     padding: 20px;
     text-align: center;
-    /* Centrar el texto dentro del main */
 }
 
 .main-project {
@@ -101,8 +127,9 @@ header {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding-top: 80px; /* Agregamos un espacio igual a la altura de la barra de navegación */
-  }
+    padding-top: 80px;
+    /* Agregamos un espacio igual a la altura de la barra de navegación */
+}
 
 .main .welcome h1 {
     padding-top: 200px;
@@ -147,15 +174,8 @@ header {
 /* Estilos para el contenido dentro del main */
 .content {
     display: flex;
-    justify-content: center;
-    /* Centrar el contenido horizontalmente */
+    flex-direction: column;
     align-items: center;
-    /* Centrar el contenido verticalmente */
-    flex-wrap: wrap;
-    /* Permitir que los elementos se envuelvan a una nueva línea si el espacio es insuficiente */
-    padding: 10px;
-    text-align: center;
-    /* Centrar el texto dentro del main */
 }
 
 .about {
@@ -165,6 +185,7 @@ header {
 }
 
 .about img {
+    padding: 40px;
     width: 300px;
     /* Tamaño de la imagen (ajustar según tus necesidades) */
     border-radius: 50%;
@@ -214,11 +235,13 @@ header {
     flex-direction: column;
     align-items: flex-end;
     text-align: justify;
-    padding-top: 100px; /* Agregamos padding para dejar espacio entre el contenido y la barra de navegación */
-    margin-bottom: 100px; /* Agregamos margen inferior para evitar que se solape con el footer */
+    padding-top: 100px;
+    /* Agregamos padding para dejar espacio entre el contenido y la barra de navegación */
+    margin-bottom: 100px;
+    /* Agregamos margen inferior para evitar que se solape con el footer */
 }
 
-.main-project h2{
+.main-project h2 {
     text-align: left;
     margin-left: 20px;
     font-size: 36px;
@@ -245,7 +268,7 @@ header {
 .info-content article a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #008080;
+    background-color: #040537;
     color: white;
     text-decoration: none;
     border-radius: 10px;
@@ -256,7 +279,7 @@ header {
 }
 
 .info-content article a:hover {
-    background-color: #00CED1;
+    background-color: #B0E0E6;
 }
 
 /* Estilos para la imagen de cada proyecto */
